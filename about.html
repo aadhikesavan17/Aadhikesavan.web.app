@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aadhikesavan</title>
+    <link rel="icon" href="logooo.png" type="image/x-icon">
+     <!--font for clickme-->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet">
+ 
+     <!--font for reamaining all-->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+     
+     <!--font for my name-->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Italianno&family=Permanent+Marker&display=swap" rel="stylesheet">
+
+     <!--About content-->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Italianno&family=Pacifico&family=Permanent+Marker&display=swap" rel="stylesheet">
+    
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Italianno&family=Lobster&family=Pacifico&family=Permanent+Marker&display=swap" rel="stylesheet">
+    
+     <link rel="stylesheet" href="about.css">
+  
+</head>
+<body>
+    <div class="about-main-container">
+        <div class="name-container">
+            <button class="name">AADHI</button>
+        </div>
+        <div class="arrow-container">
+            <button class="arrow" onclick="arrow()"><img width="50" height="50" src="https://img.icons8.com/windows/64/FFFFFF/circled-left-2.png" alt="circled-left-2"/></button>
+        </div>
+        <div class="line-container">
+            <hr class="line"/>
+        </div>
+        <div class="profile-container">
+            <a href="https://www.linkedin.com/in/aadhi-kesavan/" target="_blank" class="linkedin">
+                <button class="linkedin"><img width="40" height="40" src="https://img.icons8.com/ios-filled/50/FFFFFF/linkedin.png" alt="linkedin"/>></button>
+            </a>
+            <a href="https://github.com/aadhikesavan17" target="_blank" class="github">
+                <button class="github"><img width="40" height="40" src="https://img.icons8.com/windows/64/FFFFFF/github.png" alt="github"/>></button>
+            </a>
+        </div>
+        <div class="back-about">
+            <h1 class="h1-about">ABOUT</h1>
+        </div>
+        <div class="about-me">
+            <h1 class="abut-me-heading">Hi there 👋 I am Aadhikesavan</h1>
+            <h1 class="about-me-sub">
+                I'm a recent college graduate with a passion for front-end development. I love creating engaging and user-friendly web experiences, and I'm always excited to learn new tools and techniques to bring designs to life. In addition to front-end, I’m currently learning back-end development, which helps me build more dynamic, full-stack applications.
+            </h1>
+            <h1 class="about-me-sub2">
+                As I continue to grow my skills and explore new projects, I'm actively seeking a front-end development role where I can contribute and learn. Feel free to check out my projects, which showcase my work with HTML, CSS, JavaScript, and modern frameworks.
+            </h1>
+            <h1 class="about-me-sub3">
+                Let's connect and build something amazing together!
+            </h1>
+        </div>
+        <div class="animated-object">
+            <img class="anime200" height="600" width="350" src="animation.jpeg">
+        </div>
+    </div>
+    
+
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <script>
+        // Animation for the image inside the animated-object
+        anime({
+            targets: '.anime200',
+            translateX: 70, 
+            translateY: 70,
+            loop: true, 
+            easing: 'easeInOutSine',
+            duration: 2000, 
+            direction: 'alternate',
+        });
+    </script>
+</body>
+</html>

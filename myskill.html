@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aadhikesavan</title>
+    <link rel="icon" href="logooo.png" type="image/x-icon">
+     <!--font for clickme-->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap" rel="stylesheet">
+ 
+     <!--font for reamaining all-->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+     
+     <!--font for my name-->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Italianno&family=Permanent+Marker&display=swap" rel="stylesheet">
+
+     <!--About content-->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Italianno&family=Pacifico&family=Permanent+Marker&display=swap" rel="stylesheet">
+    
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Italianno&family=Lobster&family=Pacifico&family=Permanent+Marker&display=swap" rel="stylesheet">
+    
+     <link rel="stylesheet" href="about.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+    <link rel="stylesheet" href="myskill.css">
+</head>
+<body>
+<div id="particles-js">
+    <div class="myskill-container">
+        <div class="name-container">
+            <button class="name">AADHI</button>
+        </div>
+        <div class="line-container">
+            <hr class="line"/>
+        </div>
+        <div class="arrow-container-myskill" >
+            <button class="arrow-myskill" id="arrowButton" ><img width="48" height="48" src="https://img.icons8.com/material-outlined/48/circled-right.png" alt="circled-right"/></button>
+        </div>
+        <div class="profile-container">
+            <a href="https://www.linkedin.com/in/aadhi-kesavan/" target="_blank" class="linkedin">
+                <button class="linkedin"><img width="40" height="40" src="https://img.icons8.com/ios-filled/40/linkedin.png" alt="linkedin"/></button>
+            </a>
+            <a href="https://github.com/aadhikesavan17" target="_blank" class="github">
+                <button class="github"><img width="40" height="40" src="https://img.icons8.com/ios-glyphs/40/github.png" alt="github"/></button>
+            </a>
+        </div>
+        <div class="box1">
+            <div class="icon1">
+                <img  width="64" height="64" src="https://img.icons8.com/glyph-neue/64/laptop-coding.png" alt="laptop-coding"/>
+            </div>
+            <h1 class="h1">Software Developer</h1>
+            <h2 class="box1-text1">I enjoy writing clean code and creating useful products.</h2>
+            <h1 class="h1sub1">I LIKE TO CODE IN</h1>
+            <ul class="h1sub1-text1">
+                <li>Python</li>
+                <li>Javascript</li>
+                <li>React js</li>
+                <li>MySQL</li>
+            </ul>
+            <h1 class="h1sub2">TOOLS</h1>
+            <ul class="h1sub2-text1">
+                <li>Pycharm</li>
+                <li>Vscode</li>
+                <li>Github</li>
+            </ul>
+
+        </div>
+        <div class="box2">
+            <div class="icon2">
+                <img width="64" height="64" src="https://img.icons8.com/ios-filled/50/paint-palette.png" alt="paint-palette"/>
+            </div>
+            <h1 class="h2">Frontend-Developer</h1>
+            <h2 class="box2-text1">As a fresher, I'm excited to bring new concepts to life. I feel fortunate to be a Fullstack developer, as my work directly impacts the user experience.</h2>
+            <h1 class="h2sub1">SKILLS</h1>
+            <ul class="h2sub1-text1">
+                <li>Html</li>
+                <li>Css</li>
+                <li>Javascript</li>
+                <li>React js</li>
+                <li>Python</li>
+                <li>MySQL</li>
+                <li>Bootstrap</li>
+            </ul>
+        </div>
+    </div>
+</div>    
+ 
+    <script src="particles.js"></script>
+    <script src="app.js"></script>
+    <script src="script.js"></script>
+    <script>
+    document.getElementById('arrowButton').addEventListener('click', function() {
+        // Add the fade-out class to the body
+        document.body.classList.add('fade-out');
+    
+        // Wait for the transition to complete before redirecting
+        setTimeout(function() {
+            window.location.href = 'index.html'; // Redirect to index1.html
+        }, 1000); // Match this duration with the CSS transition duration
+    });
+    </script>
+</body>
+</html>

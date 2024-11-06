@@ -1,0 +1,388 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+ .main-container{
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */ 
+    position: relative;
+    display: block;
+    transition: transform 0.7s, opacity 0.7s; /* Add transition for smooth effect */
+
+  }
+
+  .hidden {
+    transform: translateY(100%); /* Move down */
+    opacity: 0; /* Fade out */
+}
+
+.full-screen {
+  position: fixed; /* Make it fixed to the viewport */
+  top: 0; /* Align to the top */
+  left: 0; /* Align to the left */
+  width: 100vw; /* Full width */
+  height: 100vh; /* Full height */
+  background-color: black; /* Set background color */
+  z-index: 1000; /* Ensure it's above other content */
+}
+
+ 
+.resume:hover {
+  transform: scale3d(1.2, 1.2, 1);
+}
+
+.about:hover {
+  transform: scale3d(1.2, 1.2, 1);
+}
+
+.arrow:hover{
+  transform: scale3d(1.2, 1.2, 1);
+}
+
+.skills:hover{
+  transform: scale3d(1.2, 1.2, 1);
+}
+
+
+  .circle{
+    position: absolute;
+    top:35%;
+    left:40%;
+  }
+  
+  .yang1 {
+    background: #000;
+    border-radius: 50%;
+    border: 28px solid #000;
+  }
+  
+  .yang2 {
+    width: 140px; /* Reduced by 30% from 200px */
+    height: 70px; /* Reduced by 30% from 100px */
+    border-bottom: 70px solid #fff; /* Reduced by 30% from 100px */
+    border-radius: 50%;
+    animation: animate 1.5s linear infinite; /* Keeps the faster rotation */
+  }
+  
+  .yang2::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 14px; /* Reduced by 30% from 20px */
+    height: 14px; /* Reduced by 30% from 20px */
+    background: #fff;
+    border: 28px solid #000; /* Reduced by 30% from 40px */
+    border-radius: 50%;
+  }
+  
+  .yang2::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 14px; /* Reduced by 30% from 20px */
+    height: 14px; /* Reduced by 30% from 20px */
+    background: #000;
+    border: 28px solid #fff; /* Reduced by 30% from 40px */
+    border-radius: 50%;
+  }
+  
+  @keyframes animate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .about-container {
+    height: 50px;
+    width: 100px;
+    position: absolute;
+    left: 30%;
+    bottom: -70px; /* Start from the bottom, off-screen */
+    transition: bottom 0.7s; /* Transition for bottom property */
+}
+
+.about-container.loaded {
+    bottom: 1%; /* Move to the final position */
+}
+
+.about {
+    background: none; /* No background */
+    border: none; /* No border */
+    color: black; /* Text color */
+    font-weight: 550;
+    font-size: 25px; /* Font size */
+    font-family: 'Lato', sans-serif;  /*only this text uses this font*/
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+
+.skills-container {
+  height: 50px;
+  width: 100px;
+  position: absolute;
+  left: 60%;
+  bottom: -70px; /* Start from the bottom, off-screen */
+  transition: bottom 0.7s; /* Transition for bottom property */
+}
+
+.skills-container.loaded {
+  bottom: 1%; /* Move to the final position */
+}
+
+.skills {
+  background: none; /* No background */
+  border: none; /* No border */
+  color: black; /* Text color */
+  font-weight: 550;
+  font-size: 25px; /* Font size */
+  font-family: 'Lato', sans-serif;  /*only this text uses this font*/
+  transition: color 0.3s; /* Smooth color transition */
+}
+
+  .resume-container {
+    height: 50px;
+    width: 100px;
+    position: absolute;
+    left: 25%;
+    top: -70px; /* Start from the top, off-screen */
+    transition: top 0.7s; /* Transition for top property */
+}
+
+.resume-container.loaded {
+    top: 3%; /* Move to the final position */
+}
+
+.resume {
+    background: none; /* No background */
+    border: none; /* No border */
+    color: black; /* Text color */
+    font-weight: 550;
+    font-size: 25px; /* Font size */
+    font-family: 'Lato', sans-serif;  /*only this text uses this font*/
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+.hi-container {
+  height: 50px;
+  width: 100px;
+  position: absolute;
+  right: 3%;
+  top: -70px; /* Start from the top, off-screen */
+  transition: top 0.7s; /* Transition for top property */
+}
+
+.hi-container.loaded {
+  top: 3%; /* Move to the final position */
+}
+
+.hi {
+  background: none; /* No background */
+  border: none; /* No border */
+  color: black; /* Text color */
+  font-weight: 500;
+  font-size: 25px; /* Font size */
+  font-family: 'Lato', sans-serif;  /*only this text uses this font*/
+  transition: color 0.3s; /* Smooth color transition */
+}
+
+  .name-container{
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    left:3%;
+    top:2%;
+  }
+
+  .name{
+    background-color: none;
+    border: none;
+    color: black; /* Text color */
+    font-weight: 400;
+    font-style: normal; /* Font size */
+    font-size: 40px;background: none; /* No background */
+    font-family: "Permanent Marker", serif
+}
+
+.project-container {
+  height: 150px;
+  width: 100px;
+  position: absolute;
+  left: -120px; /* Start from the left, off-screen */
+  top: 25%;
+  transition: left 0.7s; /* Transition for left property */
+}
+
+.project-container.loaded {
+  left: 1%; /* Move to the final position */
+}
+
+.project {
+  background: none; /* No background */
+  border: none; /* No border */
+  color: black; /* Text color */
+  font-weight: 525;
+  font-size: 25px; /* Font size */
+  font-family: 'Lato', sans-serif;  
+  transition: color 0.3s; /* Smooth color transition */
+  transform: rotate(-90deg);
+}
+
+.feast-container {
+  height: 100px;
+  width: 50px;
+  position: absolute;
+  right: -70px; /* Start from the right, off-screen */
+  bottom: 40%;
+  transition: right 0.7s; /* Transition for right property */
+}
+
+.feast-container.loaded {
+  right: 6%; /* Move to the final position */
+}
+
+.feast {
+  background: none; /* No background */
+  border: none; /* No border */
+  color: black; /* Text color */
+  font-weight: 550;
+  font-size: 25px; /* Font size */
+  font-family: 'Lato', sans-serif;  /*only this text uses this font*/
+  transition: color 0.3s; /* Smooth color transition */
+  transform: rotate(90deg);
+}
+/*
+.arrow-container{
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: 3%;
+    right: 50%;
+}
+
+.arrow{
+    background-color: transparent;
+    border: none;
+    color:none;
+    transform: rotate(180deg);
+}*/
+
+.arrow{
+  background-color: transparent;
+  border: none;
+  color: black;
+  transform: rotate(180deg);
+  transition: transform 1s, opacity 1s; 
+  position: absolute;
+  top: 3%;
+  left:45%;
+}
+
+.arrow:hover {
+transform: rotate(180deg) scale(1.1); /* Scale up slightly on hover */
+opacity: 0.8; /* Change opacity on hover */
+}
+
+.arrow img {
+width: 50px;
+height: 50px;
+transition: transform 1s; /* Transition for image */
+}
+
+.arrow:hover img {
+transform: rotate(15deg); /* Rotate image slightly on hover */
+}
+
+/*.line-container{
+    height: 300px;
+    width: 30px;
+    position: absolute;
+    right:101%;
+    top:84.5%;
+}*/
+
+.line-container{
+  position: absolute; /* Enable positioning */
+  left:4.3%;
+  bottom:0.5%;
+}
+
+.line {
+  background: none; /* No background */
+  border: 2px solid black; /* Border for the line */
+  border-radius: 10px; /* Rounded edges */
+  box-sizing: border-box;
+  width: 2px; /* Width of the line */
+  height: 200px; /* Height of the line */
+  transform: translateY(100%); /* Start below the visible area */
+  opacity: 0; /* Start invisible */
+  transition: transform 1s ease, opacity 1.5s ease; /* Transition for transform and opacity */
+  transition-delay: 1s;
+}
+
+.line.loaded {
+  transform: translateY(0); /* Move to original position */
+  opacity: 1; /* Fully visible */
+}
+
+.profile-container {
+  display: flex; /* Align icons in a row */
+  gap: 20px; /* Space between icons */
+  flex-direction:column;
+  position: absolute;
+  left:3%;
+  top:50%;
+}
+
+.profile-container button {
+  background: none; /* No background for buttons */
+  border: none; /* No border for buttons */
+  cursor: pointer; /* Change cursor to pointer */
+  outline: none; /* Remove outline */
+  animation: blink 1.5s infinite; /* Apply blinking animation */
+  transform: translateY(100%); /* Start below the visible area */
+  opacity: 0; /* Start invisible */
+  transition: transform 1s ease, opacity 1.5s ease; /* Transition for transform and opacity */
+  transition-delay: 1s;
+}
+
+.profile-container.loaded2 button {
+  transform: translateY(0); /* Move to original position */
+  opacity: 1; /* Fully visible */
+}
+
+
+@keyframes blink {
+  0%, 100% {
+      transform: scale(1); /* Original size */
+  }
+  50% {
+      transform: scale(1.2); /* Scale up to 120% */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

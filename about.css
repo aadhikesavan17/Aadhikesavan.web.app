@@ -1,0 +1,205 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+body{
+  margin: 0;
+  overflow: hidden; /* Prevent scrollbars */
+}
+
+ .about-main-container{
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */ 
+    position: relative;
+    display: block;
+    transition: transform 0.7s, opacity 0.7s; /* Add transition for smooth effect */
+    background-color:black;
+  }
+
+  .hidden {
+    transform: translateY(100%); /* Move down */
+    opacity: 0; /* Fade out */
+}
+ 
+button:hover {
+  transform: scale(1.1); /* Scale the button up by 10% */
+}
+
+
+.name-container{
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    left:3%;
+    top:2%;
+  }
+
+  .name{
+    background-color: none;
+    border: none;
+    color: white; /* Text color */
+    font-weight: 400;
+    font-style: normal; /* Font size */
+    font-size: 40px;background: none; /* No background */
+    font-family: "Permanent Marker", serif
+}
+
+
+.arrow-container{
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: 3%;
+    right: 50%;
+}
+
+.arrow{
+    background-color: transparent;
+    border: none;
+    color: black;
+    transform: rotate(180deg);
+}
+
+.line-container{
+    position: absolute; /* Enable positioning */
+    left:4.3%;
+    bottom:0.5%;
+  }
+
+.line {
+    background: none; /* No background */
+    border: 2px solid white; /* Border for the line */
+    border-radius: 10px; /* Rounded edges */
+    box-sizing: border-box;
+    width: 2px; /* Width of the line */
+    height: 200px; /* Height of the line */
+    transform: translateY(100%); /* Start below the visible area */
+    opacity: 0; /* Start invisible */
+    transition: transform 1s ease, opacity 1.5s ease; /* Transition for transform and opacity */
+    transition-delay: 1s;
+  }
+  
+  .line.loaded {
+    transform: translateY(0); /* Move to original position */
+    opacity: 1; /* Fully visible */
+  }
+
+  .profile-container {
+    display: flex; /* Align icons in a row */
+    gap: 20px; /* Space between icons */
+    flex-direction:column;
+    position: absolute;
+    left:3%;
+    top:50%;
+  }
+
+  .profile-container button {
+    background: none; /* No background for buttons */
+    border: none; /* No border for buttons */
+    cursor: pointer; /* Change cursor to pointer */
+    outline: none; /* Remove outline */
+    animation: blink 1.5s infinite; /* Apply blinking animation */
+    transform: translateY(100%); /* Start below the visible area */
+    opacity: 0; /* Start invisible */
+    transition: transform 1s ease, opacity 1.5s ease; /* Transition for transform and opacity */
+    transition-delay: 1s;
+  }
+  
+  .profile-container.loaded2 button {
+    transform: translateY(0); /* Move to original position */
+    opacity: 1; /* Fully visible */
+  }
+  
+  
+  @keyframes blink {
+    0%, 100% {
+        transform: scale(1); /* Original size */
+    }
+    50% {
+        transform: scale(1.2); /* Scale up to 120% */
+    }
+  }
+
+  .about-me{
+    height: 450px;
+    width: 730px;
+    color: white;
+    border: 3px solid white; 
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    transition: color 0.3s; /* Smooth color transition */
+    word-spacing: 10px;
+    padding-left: 10px;
+    position: absolute;
+    left: 13%;
+    bottom: 4%;
+    z-index: 200;
+}
+
+.h1-about{
+    color:rgb(126, 124, 124);
+    font-weight: 1000;
+    font-size: 100px; 
+    font-family: 'Lato', sans-serif;  /*only this text uses this font*/
+    position: absolute;
+    left: 7%;
+    top:15%;
+    z-index: 1;
+}
+
+.animated-object{
+  background-color: black;
+  height: 550px;
+  width: 350px;
+  position: absolute;
+  top: 0%;
+  right:5%;
+}
+
+.anime200 {
+  height: 100%; /* Make the image fill the container */
+  width: auto; /* Maintain aspect ratio */
+}
+
+.abut-me-heading{
+  font-family: "Itim", cursive;
+  font-weight: 700;
+  font-style: normal;
+  font-size: x-larger;
+  transform: 0.4s;
+}
+
+.about-me-sub{
+  font-family: "Itim", cursive;
+  font-weight: 700;
+  font-style: normal;
+  font-size: larger;
+  position: absolute;
+  top: 15%;
+}
+
+.about-me-sub2{
+  font-family: "Itim", cursive;
+  font-weight: 700;
+  font-style: normal;
+  font-size: larger;
+  position: absolute;
+  top: 55%;
+}
+
+.about-me-sub3{
+  font-family: "Itim", cursive;
+  font-weight: 700;
+  font-style: normal;
+  font-size: larger;
+  position: absolute;
+  top: 90%;
+}

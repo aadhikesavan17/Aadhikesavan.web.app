@@ -1,0 +1,315 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+body {
+  transition: opacity 1s ease; /* Transition for fade effect */
+  opacity: 1; /* Initial opacity */
+}
+
+ .main-container{
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */ 
+    position: relative;
+    display: block;
+    transition: transform 0.7s, opacity 0.7s; /* Add transition for smooth effect */
+
+  }
+
+  .hidden {
+    transform: translateY(100%); /* Move down */
+    opacity: 0; /* Fade out */
+}
+
+.full-screen {
+  position: fixed; /* Make it fixed to the viewport */
+  top: 0; /* Align to the top */
+  left: 0; /* Align to the left */
+  width: 100vw; /* Full width */
+  height: 100vh; /* Full height */
+  background-color: black; /* Set background color */
+  z-index: 1000; /* Ensure it's above other content */
+}
+
+ 
+button:hover {
+  transform: scale(1.1); /* Scale the button up by 10% */
+}
+
+.name-container{
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    left:3%;
+    top:2%;
+  }
+
+  .name{
+    background-color: none;
+    border: none;
+    color: black; /* Text color */
+    font-weight: 400;
+    font-style: normal; /* Font size */
+    font-size: 40px;background: none; /* No background */
+    font-family: "Permanent Marker", serif
+}
+
+/*.arrow-container{
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: 3%;
+    right: 50%;
+}
+
+.arrow{
+    background-color: transparent;
+    border: none;
+    color:none;
+    transform: rotate(180deg);
+} */
+
+/*.line-container{
+    height: 300px;
+    width: 30px;
+    position: absolute;
+    right:101%;
+    top:84.5%;
+}*/
+
+.line-container{
+  position: absolute; /* Enable positioning */
+  left:4.3%;
+  bottom:0.5%;
+}
+
+.line {
+  background: none; /* No background */
+  border: 2px solid black; /* Border for the line */
+  border-radius: 10px; /* Rounded edges */
+  box-sizing: border-box;
+  width: 2px; /* Width of the line */
+  height: 200px; /* Height of the line */
+  transform: translateY(100%); /* Start below the visible area */
+  opacity: 0; /* Start invisible */
+  transition: transform 1s ease, opacity 1.5s ease; /* Transition for transform and opacity */
+  transition-delay: 1s;
+}
+
+.line.loaded {
+  transform: translateY(0); /* Move to original position */
+  opacity: 1; /* Fully visible */
+}
+
+.profile-container {
+  display: flex; /* Align icons in a row */
+  gap: 20px; /* Space between icons */
+  flex-direction:column;
+  position: absolute;
+  left:3%;
+  top:50%;
+}
+
+.profile-container button {
+  background: none; /* No background for buttons */
+  border: none; /* No border for buttons */
+  cursor: pointer; /* Change cursor to pointer */
+  outline: none; /* Remove outline */
+  animation: blink 1.5s infinite; /* Apply blinking animation */
+  transform: translateY(100%); /* Start below the visible area */
+  opacity: 0; /* Start invisible */
+  transition: transform 1s ease, opacity 1.5s ease; /* Transition for transform and opacity */
+  transition-delay: 1s;
+}
+
+.profile-container.loaded2 button {
+  transform: translateY(0); /* Move to original position */
+  opacity: 1; /* Fully visible */
+}
+
+
+@keyframes blink {
+  0%, 100% {
+      transform: scale(1); /* Original size */
+  }
+  50% {
+      transform: scale(1.2); /* Scale up to 120% */
+  }
+}
+
+.box1{
+    height:500px;
+    width: 450px;
+    border: 4px solid black; 
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 7%;
+    left:15%;
+}
+
+.box2{
+    height:500px;
+    width: 450px;
+    border: 4px solid black; 
+    box-sizing: border-box;
+    position: absolute;
+    bottom:7%;
+    left: 60%;
+
+}
+
+.icon1{
+    position: relative;
+    left:30px;
+}
+
+.h1{
+    position: absolute;
+    left: 26%;
+    top: 12px;
+    font-family: "Itim", cursive;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.icon2{
+    position: relative;
+    left:30px;
+    top:10px;
+}
+
+.h2{
+    position: absolute;
+    left:25%;
+    top:12px;
+    font-family: "Itim", cursive;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.box1-text1{
+    position: relative;
+    top: 15px;
+    left:20px;
+    font-weight: 500;
+    font-family: "Itim", cursive;  /*only this text uses this font*/
+    font-size: large;
+    transition: color 0.3s; /* Smooth color transition */
+    word-spacing: 5px;
+}
+
+#particles-js{
+    height: 100vh;
+    width: 100%;
+    background-color: white;
+    z-index: 1;
+}
+
+.h1sub1{
+  position: absolute;
+    left: 3%;
+    top: 160px;
+    font-family: "Itim", cursive;
+    font-weight: 700;
+    font-style: normal;
+    font-size: x-large;
+}
+
+.h1sub1-text1{
+  position: absolute;
+    left: 15%;
+    top: 200px;
+    font-family: "Itim", cursive;
+    font-weight: 500;
+    font-style: normal;
+    font-size: large;
+}
+
+.h1sub2{
+  position: absolute;
+    left: 3%;
+    top: 320px;
+    font-family: "Itim", cursive;
+    font-weight: 700;
+    font-style: normal;
+    font-size: x-large;
+}
+
+.h1sub2-text1{
+  position: absolute;
+    left: 15%;
+    top: 360px;
+    font-family: "Itim", cursive;
+    font-weight: 500;
+    font-style: normal;
+    font-size: large;
+}
+
+.box2-text1{
+  position: relative;
+  top: 15px;
+  left:20px;
+  font-weight: 500;
+  font-family: "Itim", cursive;  /*only this text uses this font*/
+  font-size: large;
+  transition: color 0.3s; /* Smooth color transition */
+  word-spacing: 5px;
+  align-items: center;
+}
+
+.h2sub1{
+  position: absolute;
+    left: 3%;
+    top: 200px;
+    font-family: "Itim", cursive;
+    font-weight: 700;
+    font-style: normal;
+    font-size: x-large;
+}
+
+.h2sub1-text1{
+  position: absolute;
+  left: 15%;
+  top: 250px;
+  font-family: "Itim", cursive;
+  font-weight: 500;
+  font-style: normal;
+  font-size: large;
+}
+
+.fade-out {
+  opacity: 0; /* Fade out effect */
+}
+.arrow-container-myskill {
+  position: absolute;
+  top: 3%;
+  left: 45%;
+  cursor: pointer; /* Change cursor to pointer */
+}
+
+.arrow-myskill {
+  background-color: transparent;
+  border: none;
+  transition: transform 1s, opacity 1s; 
+}
+
+.arrow-myskill:hover {
+  transform: scale(1.1); /* Scale up slightly on hover */
+  opacity: 0.8; /* Change opacity on hover */
+}
+
+.arrow-myskill img {
+  width: 48px;
+  height: 48px;
+  transition: transform 1s; /* Transition for image */
+}
+
+.arrow-myskill:hover img {
+  transform: rotate(15deg); /* Rotate image slightly on hover */
+}

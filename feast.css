@@ -1,0 +1,630 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+body {
+    transition: opacity 1s ease; /* Transition for fade effect */
+    opacity: 1; /* Initial opacity */
+}
+
+.main-container{
+    display: grid;
+    place-items: center;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */ 
+    position: relative;
+    display: block;
+    transition: transform 0.7s, opacity 0.7s; /* Add transition for smooth effect */
+    position: fixed;
+
+  }
+
+  .hidden {
+    transform: translateY(100%); /* Move down */
+    opacity: 0; /* Fade out */
+}
+
+.full-screen {
+  position: fixed; /* Make it fixed to the viewport */
+  top: 0; /* Align to the top */
+  left: 0; /* Align to the left */
+  width: 100vw; /* Full width */
+  height: 100vh; /* Full height */
+  background-color: black; /* Set background color */ /* Ensure it's above other content */
+}
+
+ 
+button:hover {
+  transform: scale(1.1); /* Scale the button up by 10% */
+}
+
+.name-container{
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    left:3%;
+    top:2%;
+    position: fixed;
+    z-index: 1000;
+  }
+
+  .name{
+    background-color: none;
+    border: none;
+    color: black; /* Text color */
+    font-weight: 400;
+    font-style: normal; /* Font size */
+    font-size: 40px;background: none; /* No background */
+    font-family: "Permanent Marker", serif
+}
+
+/*.arrow-container{
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: 3%;
+    right: 50%;
+    position: fixed;
+    z-index: 1000;
+}
+
+.arrow{
+    background-color: transparent;
+    border: none;
+    color:none;
+    transform: rotate(180deg);
+} */
+
+/*.line-container{
+    height: 300px;
+    width: 30px;
+    position: absolute;
+    right:101%;
+    top:84.5%;
+}*/
+
+.line-container{
+  position: absolute; /* Enable positioning */
+  left:4.3%;
+  bottom:0.5%;
+  position: fixed;
+  z-index: 1000;
+}
+
+.line {
+  background: none; /* No background */
+  border: 2px solid black; /* Border for the line */
+  border-radius: 10px; /* Rounded edges */
+  box-sizing: border-box;
+  width: 2px; /* Width of the line */
+  height: 200px; /* Height of the line */
+  transform: translateY(100%); /* Start below the visible area */
+  opacity: 0; /* Start invisible */
+  transition: transform 1s ease, opacity 1.5s ease; /* Transition for transform and opacity */
+  transition-delay: 1s;
+}
+
+.line.loaded {
+  transform: translateY(0); /* Move to original position */
+  opacity: 1; /* Fully visible */
+}
+
+.profile-container {
+  display: flex; /* Align icons in a row */
+  gap: 20px; /* Space between icons */
+  flex-direction:column;
+  position: absolute;
+  left:3%;
+  top:50%;
+  position: fixed;
+  z-index: 1000;
+}
+
+.profile-container button {
+  background: none; /* No background for buttons */
+  border: none; /* No border for buttons */
+  cursor: pointer; /* Change cursor to pointer */
+  outline: none; /* Remove outline */
+  animation: blink 1.5s infinite; /* Apply blinking animation */
+  transform: translateY(100%); /* Start below the visible area */
+  opacity: 0; /* Start invisible */
+  transition: transform 1s ease, opacity 1.5s ease; /* Transition for transform and opacity */
+  transition-delay: 1s;
+  z-index: 1000;
+}
+
+.profile-container.loaded2 button {
+  transform: translateY(0); /* Move to original position */
+  opacity: 1; /* Fully visible */
+}
+
+
+@keyframes blink {
+  0%, 100% {
+      transform: scale(1); /* Original size */
+  }
+  50% {
+      transform: scale(1.2); /* Scale up to 120% */
+  }
+}
+
+.img{
+    height: 100vh;
+    width: 100vw;
+    opacity: 0.4; 
+    z-index: 1;
+    position: fixed;
+}
+
+.text{
+    color:rgb(143, 140, 140);
+    font-weight: 1000;
+    font-size: 130px; 
+    font-family: 'Lato', sans-serif; 
+    position: absolute;
+    position: absolute;
+    top:13%;
+    left:10%;
+    z-index: 2;
+    position: fixed;
+}
+
+.box1{
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    z-index: 5;
+    height: 350px;
+    width: 350px;
+    background-color: black;
+    z-index: 3;
+}
+
+.LeetCode{
+    position: absolute;
+    top: -35%;
+    left:0.05%;
+}
+
+.out-line{
+    border: 2px solid white;
+    box-sizing: border-box;
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    left: 7%;
+    top: 7%;
+}
+
+.LC{
+    font-weight: 550;
+    font-size: 18px; 
+    font-family: 'Lato', sans-serif; 
+    color: white;
+    position: absolute;
+    top: 80%;
+    left: 22%;
+}
+.box2{
+    position: absolute;
+    top: 30%;
+    right: 20%;
+    z-index: 5;
+    height: 350px;
+    width: 350px;
+    background-color: white;
+    border: 2px solid black;
+    box-sizing: border-box;
+    z-index: 3;
+}
+
+
+
+.box3{
+    position: absolute;
+    top: 95%;
+    right: 20%;
+    z-index: 5;
+    height: 350px;
+    width: 350px;
+    background-color: white;
+    border: 2px solid black;
+    box-sizing: border-box;
+    z-index: 3;
+
+}
+
+
+.box4{
+    position: absolute;
+    top: 95%;
+    left: 20%;
+    z-index: 5;
+    height: 350px;
+    width: 350px;
+    background-color: white;
+    border: 2px solid black;
+    box-sizing: border-box;
+    z-index: 3;
+}
+
+.box5{
+    position: absolute;
+    top: 160%;
+    right: 20%;
+    z-index: 5;
+    height: 350px;
+    width: 350px;
+    background-color: white;
+    border: 2px solid black;
+    box-sizing: border-box;
+    z-index: 3;
+}
+
+.box6{
+    position: absolute;
+    top: 160%;
+    left: 20%;
+    z-index: 5;
+    height: 350px;
+    width: 350px;
+    background-color: white;
+    border: 2px solid black;
+    box-sizing: border-box;
+    z-index: 3;
+}
+
+.box7{
+    position: absolute;
+    top: 225%;
+    left: 20%;
+    z-index: 5;
+    height: 350px;
+    width: 350px;
+    background-color: white;
+    border: 2px solid black;
+    box-sizing: border-box;
+    z-index: 3;
+}
+
+
+
+.stucor{
+    height: 220px;
+    width: 320px;
+    position: absolute;
+    left: 4%;
+    top:3%;
+    transition: color 0.3s;
+}
+
+.linehb{
+    position: absolute;
+    top:73%;
+    left:2%;
+    transition: color 0.3s;
+
+}
+
+.linehw{
+    position: absolute;
+    top:73%;
+    left:2%;
+    transition: color 0.3s;
+}
+
+.stucor-word{
+    font-weight: 550;
+    font-size: 20px; 
+    font-family: 'Lato', sans-serif; 
+    position: absolute;
+    top:67%;
+    left: 6%;
+    transition: color 0.3s;
+    color:black;
+}
+
+.h1-s1{
+    font-weight: 550;
+    font-size: 15px; 
+    font-family: 'Lato', sans-serif; 
+    position: absolute;
+    left: 6%;
+    top: 80%;
+    transition: color 0.3s;
+    color:black;
+}
+
+.h1-s2{
+    font-weight: 550;
+    font-size: 15px; 
+    font-family: 'Lato', sans-serif; 
+    position: absolute;
+    left: 26%;
+    top: 80%;
+    transition: color 0.3s;
+}
+
+.h1-s3{
+    font-weight: 550;
+    font-size: 15px; 
+    font-family: 'Lato', sans-serif; 
+    position: absolute;
+    left: 43%;
+    top: 80%;
+    transition: color 0.3s;
+}
+
+.h1-s4{
+    font-family: "Itim", cursive;
+    font-weight: 500;
+    font-style: normal; 
+    font-size: 18px;
+    position: absolute;
+    left: 6%;
+    top: 90%;
+    transition: color 0.3s;
+}
+
+.box4:hover .stucor-word,
+.box4:hover .h1-s1,
+.box4:hover .h1-s2,
+.box4:hover .h1-s3,
+.box4:hover .h1-s4 {
+    color: white; /* Change text color to white on hover */
+}
+
+.box4:hover{
+    background-color: black;
+}
+
+.box4:hover .linehw {
+    opacity: 1; /* Make it visible on hover */
+}
+
+.linehb{
+    position: absolute;
+    top:73%;
+    left:2%;
+    transition: color 0.3s;
+
+}
+
+.linehw{
+    position: absolute;
+    top:73%;
+    left:2%;
+    transition: color 0.3s;
+}
+
+.oll{
+    height:215px;
+    width: 310px;
+    border: 1px solid black;
+    position: absolute;
+    top: 3%;
+    left: 4.5%;
+}
+
+.infy{
+    position: absolute;
+    left: 7%;
+    top:4%;
+}
+
+.box3:hover .stucor-word,
+.box3:hover .h1-s1,
+.box3:hover .h1-s2,
+.box3:hover .h1-s3,
+.box3:hover .h1-s4 {
+    color: white; /* Change text color to white on hover */
+}
+
+.box3:hover{
+    background-color: black;
+}
+
+.box3:hover .linehw {
+    opacity: 1; /* Make it visible on hover */
+}
+
+.oll1{
+    height:215px;
+    width: 310px;
+    border: 1px solid black;
+    position: absolute;
+    top: 3%;
+    left: 4.5%;
+}
+
+.pe{
+    position: absolute;
+    top:7%;
+    left:7%;
+}
+
+.box5:hover .stucor-word,
+.box5:hover .h1-s1,
+.box5:hover .h1-s2,
+.box5:hover .h1-s3,
+.box5:hover .h1-s4 {
+    color: white; /* Change text color to white on hover */
+}
+
+.box5:hover{
+    background-color: black;
+}
+
+.box5:hover .linehw {
+    opacity: 1; /* Make it visible on hover */
+}
+
+.oll2{
+    height:215px;
+    width: 310px;
+    border: 1px solid black;
+    position: absolute;
+    top: -5%;
+    left: -3%;
+}
+
+.ibm{
+    position: absolute;
+    left: 6%;
+    top: 5%;
+}
+
+.ibm-word{
+    font-weight: 550;
+    font-size: 20px; 
+    font-family: 'Lato', sans-serif; 
+    position: absolute;
+    top:70%;
+    left: -2%;
+    transition: color 0.3s;
+}
+
+.linehw6{
+    position: absolute;
+    top:76%;
+    left:2%;
+    transition: color 0.3s;
+
+}
+
+.linehb6{
+    position: absolute;
+    top:76%;
+    left:2%;
+    transition: color 0.3s;
+}
+
+.h6-s1{
+    font-weight: 550;
+    font-size: 15px; 
+    font-family: 'Lato', sans-serif; 
+    position: absolute;
+    left: 6%;
+    top: 83%;
+    transition: color 0.3s;
+}
+
+.box6:hover .stucor-word,
+.box6:hover .h6-s1,
+.box6:hover .h1-s4 {
+    color: white; /* Change text color to white on hover */
+}
+
+.box6:hover{
+    background-color: black;
+}
+
+.box6:hover .linehw {
+    opacity: 1; /* Make it visible on hover */
+}
+
+.h7-s2{
+    font-weight: 550;
+    font-size: 15px; 
+    font-family: 'Lato', sans-serif; 
+    position: absolute;
+    left: 48%;
+    top: 80%;
+    transition: color 0.3s;
+}
+
+.box7:hover .stucor-word,
+.box7:hover .h1-s1,
+.box7:hover .h7-s1,
+.box7:hover .h1-s4 {
+    color: white; /* Change text color to white on hover */
+}
+
+.box7:hover{
+    background-color: black;
+}
+
+.box7:hover .linehw {
+    opacity: 1; /* Make it visible on hover */
+}
+
+.fade-out {
+    opacity: 0; /* Fade out effect */
+}
+
+.arrow-container-feast {
+    position: absolute;
+    top: 3%;
+    left: 45%;
+    cursor: pointer; /* Change cursor to pointer */
+    z-index: 100;
+}
+
+.arrow-feast {
+    background-color: transparent;
+    border: none;
+    transition: transform 1s, opacity 1s; 
+}
+
+.arrow-feast:hover {
+    transform: scale(1.1); /* Scale up slightly on hover */
+    opacity: 0.8; /* Change opacity on hover */
+}
+
+.arrow-feast img {
+    width: 48px;
+    height: 48px;
+    transition: transform 1s; /* Transition for image */
+}
+
+.arrow-feast:hover img {
+    transform: rotate(15deg); /* Rotate image slightly on hover */
+}
+
+.internship{
+    position: absolute;
+    left:6.5%;
+    top:5%;
+}
+
+.h2-s2{
+    font-weight: 550;
+    font-size: 15px; 
+    font-family: 'Lato', sans-serif; 
+    position: absolute;
+    left: 48%;
+    top: 80%;
+    transition: color 0.3s;
+    color: black;
+}
+
+.h2-s4{
+    font-family: "Itim", cursive;
+    font-weight: 500;
+    font-style: normal; 
+    font-size: 17px;
+    position: absolute;
+    left: 6%;
+    top: 85%;
+    transition: color 0.3s;
+    color: black;
+}
+
+.box2:hover .stucor-word,
+.box2:hover .h1-s1,
+.box2:hover .h2-s2,
+.box2:hover .h2-s4 {
+    color: white; /* Change text color to white on hover */
+}
+
+.box2:hover{
+    background-color: black;
+}
+
+.box2:hover .linehw {
+    opacity: 1; /* Make it visible on hover */
+}

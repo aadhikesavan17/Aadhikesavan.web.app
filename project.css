@@ -1,0 +1,562 @@
+*{
+    margin:0;
+    padding:0;
+    z-index: 2;
+}
+
+.project-main-container {
+  display: flex; /* Use flexbox for centering */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 100vh; /* Full viewport height */
+  width: 230vw; /* Full viewport width */
+  position: absolute; /* Allows for positioning */
+  background-color: black; /* Background color */
+  transition: transform 0.7s, opacity 0.7s; /* Add transition for smooth effect */
+  opacity: 1;
+  position: relative;
+  overflow-x: scroll;
+}
+
+  .hidden {
+    transform: translateY(100%); /* Move down */
+    opacity: 0; /* Fade out */
+}
+
+
+.name-container{
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    left:3%;
+    top:2%;
+    position: fixed;
+  }
+
+  .name{
+    background-color: none;
+    border: none;
+    color: white; /* Text color */
+    font-weight: 400;
+    font-style: normal; /* Font size */
+    font-size: 40px;background: none; /* No background */
+    font-family: "Permanent Marker", serif
+}
+
+
+.arrow-container{
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: 3%;
+    right: 50%;
+    position: fixed;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.arrowproject{
+    background-color: transparent;
+    border: none;
+    color: black;
+    transform: rotate(180deg);
+    transition: transform 1s, opacity 1s; 
+}
+
+.arrowproject:hover {
+  transform: rotate(180deg) scale(1.1); /* Scale up slightly on hover */
+  opacity: 0.8; /* Change opacity on hover */
+}
+
+.arrowproject img {
+  width: 50px;
+  height: 50px;
+  transition: transform 10s; /* Transition for image */
+}
+
+.arrowproject:hover img {
+  transform: rotate(15deg); /* Rotate image slightly on hover */
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 1s ease; /* Transition effect for opacity */
+}
+
+.line-container{
+    position: absolute; /* Enable positioning */
+    left:4.3%;
+    bottom:0.5%;
+    position: fixed;
+  }
+
+.line {
+    background: none; /* No background */
+    border: 2px solid white; /* Border for the line */
+    border-radius: 10px; /* Rounded edges */
+    box-sizing: border-box;
+    width: 2px; /* Width of the line */
+    height: 200px; /* Height of the line */
+    transform: translateY(100%); /* Start below the visible area */
+    opacity: 0; /* Start invisible */
+    transition: transform 1s ease, opacity 1.5s ease; /* Transition for transform and opacity */
+    transition-delay: 1s;
+  }
+  
+  .line.loaded {
+    transform: translateX(0); /* Move to original position */
+    opacity: 1; /* Fully visible */
+  }
+
+  .profile-container {
+    display: flex; /* Align icons in a row */
+    gap: 20px; /* Space between icons */
+    flex-direction:column;
+    position: absolute;
+    left:3%;
+    top:50%;
+    position: fixed;
+  }
+
+  .profile-container button {
+    background: none; /* No background for buttons */
+    border: none; /* No border for buttons */
+    cursor: pointer; /* Change cursor to pointer */
+    outline: none; /* Remove outline */
+    animation: blink 1.5s infinite; /* Apply blinking animation */
+    transform: translateY(100%); /* Start below the visible area */
+    opacity: 0; /* Start invisible */
+    transition: transform 1s ease, opacity 1.5s ease; /* Transition for transform and opacity */
+    transition-delay: 1s;
+  }
+  
+  .profile-container.loaded2 button {
+    transform: translateY(0); /* Move to original position */
+    opacity: 1; /* Fully visible */
+  }
+  
+  
+  @keyframes blink {
+    0%, 100% {
+        transform: scale(1); /* Original size */
+    }
+    50% {
+        transform: scale(1.2); /* Scale up to 120% */
+    }
+  }
+
+  .h1-work{
+    color:grey;
+    font-weight: 1000;
+    font-size: 100px; 
+    font-family: 'Lato', sans-serif; 
+    position: absolute;
+    left:48%;
+    top:10% ;
+    position: fixed;
+    z-index: 1;
+  }
+
+  .h1-swipe{
+    color:grey;
+    font-weight: 1000;
+    font-size: 100px; 
+    font-family: 'Lato', sans-serif; 
+    position: absolute;
+    left:63%;
+    bottom:1% ;
+    position: fixed;
+    z-index: 1;
+  }
+
+  .ball1{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: grey;
+    position: absolute;
+    left:87.5%;
+    bottom: 4%;
+    position: fixed;
+    z-index: 1;
+  }
+
+  .ball2{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: grey;
+    position: absolute;
+    left:90%;
+    bottom: 4%;
+    position: fixed;
+    z-index: 1;
+  }
+
+  .ball3{
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: grey;
+    position: absolute;
+    left:92.5%;
+    bottom: 4%;
+    position: fixed;
+    z-index: 1;
+  }
+
+.main-project-container{
+        height: 75vh;
+        width: 200vw;
+        border: none; 
+        box-sizing: border-box;
+        position: absolute;
+        left: 5%;
+        top: 6%;
+        display: flex;
+        align-items: center;
+        gap:4%;
+
+}
+
+.project-container1{
+  height: 310px;
+  width:310px;
+  position: relative;
+  left:0%;
+  top: 5%;
+}
+
+.project-container2{
+  height: 310px;
+  width:310px;
+  position: relative;
+  left:0%;
+  top: 5%;
+}
+
+.project-container3{
+  height: 310px;
+  width:310px;
+  position: relative;
+  left:0%;
+  top: 4%;
+}
+
+.project1-front,
+.project1-back {
+    position: absolute;
+    height: 310px;
+    width: 310px;
+    backface-visibility: hidden; /* Hides the back face when rotated */
+    transition: transform 1s ease-in-out; /* Smooth transition */ /* Apply border-radius to both */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-top-right-radius: 15%;
+    border-bottom-left-radius: 15%;
+    border: 1px solid white; 
+    box-sizing: border-box;
+}
+
+.project1-front {
+    background-color: white;
+    color: black;
+}
+
+.project1-back {
+    background-color: black; /* Back box background */
+    transform: rotateY(180deg); /* Start rotated to hide it */
+}
+
+.project-container1:hover .project1-front {
+    transform: rotateY(180deg); /* Rotate front box on hover */
+}
+
+.project-container1:hover .project1-back {
+    transform: rotateY(0deg); /* Show back box on hover */
+}
+
+.project1-front-heading{
+  display: flex;
+  text-align: center;
+  position: absolute;
+  top: 1px;
+  margin: 50px;
+  font-weight: 1000;
+  font-size: 25px; 
+  font-family: 'Lato', sans-serif; 
+}
+
+.project1-front-des{
+  display: flex;
+  text-align: center;
+  margin-left: 10px;
+  margin-right: 10px;
+  position: absolute;
+  top: 150px;
+  font-weight: 550;
+  font-size: 15px; 
+  font-family: 'Lato', sans-serif; 
+}
+
+.project-back-line{
+  position: absolute;
+  top: 45%;
+}
+
+.pbd1-h1{
+  font-weight: 550;
+  font-size: 17px; 
+  font-family: 'Lato', sans-serif; 
+  position: absolute;
+  top: 55%;
+  left:10%;
+  color: white;
+}
+
+.pbd2-h1{
+  font-weight: 550;
+  font-size: 17px; 
+  font-family: 'Lato', sans-serif; 
+  position: absolute;
+  top: 55%;
+  left:30%;
+  color: white;
+}
+
+.pbd3-h1{
+    font-weight: 550;
+    font-size: 17px; 
+    font-family: 'Lato', sans-serif; 
+    position: absolute;
+    top: 55%;
+    left: 46%;
+    color:white;
+}
+
+.pbd4-h1{
+  font-weight: 550;
+  font-size: 17px; 
+  font-family: 'Lato', sans-serif; 
+  position: absolute;
+  top: 63%;
+  left: 10%;
+  color:white;
+}
+
+.project-back-visit{
+  background-color: white;
+  height: 25px; 
+  width: 130px;
+  padding: 10px; 
+  border-radius: 0px 0px 0px 50px; 
+  position: absolute;
+  bottom: 7%;
+  left:10%;
+}
+
+.pbv1-h1{
+  position: absolute;
+  color: black;
+  left:35%;
+  bottom: 25%;
+  font-weight: 400;
+  font-size: 25px; 
+  font-family: 'Lato', sans-serif; 
+}
+
+
+.github1{
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: absolute;
+  bottom: 6%;
+  left:75%;
+}
+
+.pb1-img{
+  position: absolute;
+  top:7%;
+  left:20%;
+}
+
+.project2-front,
+.project2-back {
+    position: absolute;
+    height: 310px;
+    width: 310px;
+    backface-visibility: hidden; /* Hides the back face when rotated */
+    transition: transform 1s ease-in-out; /* Smooth transition */ /* Apply border-radius to both */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-top-right-radius: 15%;
+    border-bottom-left-radius: 15%;
+    border: 1px solid white; 
+    box-sizing: border-box;
+}
+
+.project2-front {
+    background-color: white;
+    color: black;
+}
+
+.project2-back {
+    background-color: black; /* Back box background */
+    transform: rotateY(180deg); /* Start rotated to hide it */
+}
+
+.project-container2:hover .project2-front {
+    transform: rotateY(180deg); /* Rotate front box on hover */
+}
+
+.project-container2:hover .project2-back {
+    transform: rotateY(0deg); /* Show back box on hover */
+}
+
+.project2-front-heading{
+  display: flex;
+  text-align: center;
+  position: absolute;
+  top: 1px;
+  margin: 50px;
+  font-weight: 1000;
+  font-size: 25px; 
+  font-family: 'Lato', sans-serif; 
+}
+
+.project2-front-des{
+  display: flex;
+  text-align: center;
+  margin-left: 10px;
+  margin-right: 10px;
+  position: absolute;
+  top: 150px;
+  font-weight: 550;
+  font-size: 15px; 
+  font-family: 'Lato', sans-serif; 
+}
+
+.project3-front,
+.project3-back {
+    position: absolute;
+    height: 310px;
+    width: 310px;
+    backface-visibility: hidden; /* Hides the back face when rotated */
+    transition: transform 1s ease-in-out; /* Smooth transition */ /* Apply border-radius to both */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-top-right-radius: 15%;
+    border-bottom-left-radius: 15%;
+    border: 1px solid white; 
+    box-sizing: border-box;
+}
+
+.project3-front {
+    background-color: white;
+    color: black;
+}
+
+.project3-back {
+    background-color: black; /* Back box background */
+    transform: rotateY(180deg); /* Start rotated to hide it */
+}
+
+.project-container3:hover .project3-front {
+    transform: rotateY(180deg); /* Rotate front box on hover */
+}
+
+.project-container3:hover .project3-back {
+    transform: rotateY(0deg); /* Show back box on hover */
+}
+
+.project3-front-heading{
+  display: flex;
+  text-align: center;
+  position: absolute;
+  top: 1px;
+  margin: 50px;
+  font-weight: 1000;
+  font-size: 25px; 
+  font-family: 'Lato', sans-serif; 
+}
+
+.project3-front-des{
+  display: flex;
+  text-align: center;
+  margin-left: 10px;
+  margin-right: 10px;
+  position: absolute;
+  top: 150px;
+  font-weight: 550;
+  font-size: 15px; 
+  font-family: 'Lato', sans-serif; 
+}
+
+.pb3-img{
+  position: absolute;
+  top:7%;
+  left:10%;
+}
+
+.circle {
+  position: absolute;
+  top: 75%;
+  left: 90%;
+  position: fixed;
+}
+
+.yang1 {
+  background: #000;
+  border-radius: 50%;
+  border: 11.5px solid  #fff; /* Reduced by half from 23px */
+}
+
+.yang2 {
+  width: 70px; /* Reduced by half from 140px */
+  height: 35px; /* Reduced by half from 70px */
+  border-bottom: 35px solid #fff; /* Reduced by half from 70px */
+  border-radius: 50%;
+  animation: animate 1.5s linear infinite; /* Keeps the faster rotation */
+}
+
+.yang2::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 7px; /* Reduced by half from 14px */
+  height: 7px; /* Reduced by half from 14px */
+  background: #fff;
+  border: 14px solid #000; /* Reduced by half from 28px */
+  border-radius: 50%;
+}
+
+.yang2::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 7px; /* Reduced by half from 14px */
+  height: 7px; /* Reduced by half from 14px */
+  background: #000;
+  border: 14px solid #fff; /* Reduced by half from 28px */
+  border-radius: 50%;
+}
+
+@keyframes animate {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
