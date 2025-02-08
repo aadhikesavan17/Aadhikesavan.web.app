@@ -346,6 +346,26 @@
   color:white;
 }
 
+.pbd5-h1{
+  font-weight: 550;
+  font-size: 17px; 
+  font-family: 'Lato', sans-serif; 
+  position: absolute;
+  top: 63%;
+  left: 37%;
+  color:white;
+}
+
+.pbd6-h1{
+  font-weight: 550;
+  font-size: 17px; 
+  font-family: 'Lato', sans-serif; 
+  position: absolute;
+  top: 63%;
+  left: 69%;
+  color:white;
+}
+
 .project-back-visit{
   background-color: white;
   height: 25px; 

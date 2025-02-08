@@ -13,7 +13,7 @@ window.addEventListener('load', function() {
     const feastContainer = document.querySelector('.feast-container');
     const aboutContainer = document.querySelector('.about-container');
     const skillsContainer = document.querySelector('.skills-container');
-
+    const leetcodeContainer = document.querySelector('.leetcode-container');
     // Add a delay before adding the class to trigger the animation for profileContainer
     setTimeout(() => {
         profileContainer.classList.add('loaded2'); // Trigger animation for profileContainer
@@ -45,6 +45,10 @@ window.addEventListener('load', function() {
     setTimeout(() => {
         skillsContainer.classList.add('loaded'); // Trigger animation
     }, 700); // 5 seconds delay before starting the animation
+
+    setTimeout(() => {
+        leetcodeContainer.classList.add('loaded'); // Trigger animation
+    }, 700); // 1.5 second delay before starting the animation
 });
 
 
@@ -195,6 +199,9 @@ document.getElementById('nav-link').addEventListener('click', function(event) {
         }
     });
 }
+
+
+
 
 
 

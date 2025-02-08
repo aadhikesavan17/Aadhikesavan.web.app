@@ -261,6 +261,29 @@
   transition: color 0.3s; /* Smooth color transition */
   transform: rotate(90deg);
 }
+
+.leetcode-container {
+  height: 50px;
+  width: 100px;
+  position: absolute;
+  right: 25%;
+  top: -70px; /* Start from the top, off-screen */
+  transition: top 0.7s; /* Transition for top property */
+}
+
+.leetcode-container.loaded {
+  top: 3%; /* Move to the final position */
+}
+
+.leetcode {
+  background: none; /* No background */
+  border: none; /* No border */
+  color: black; /* Text color */
+  font-weight: 550;
+  font-size: 25px; /* Font size */
+  font-family: 'Lato', sans-serif;  /*only this text uses this font*/
+  transition: color 0.3s; /* Smooth color transition */
+}
 /*
 .arrow-container{
     height: 50px;
