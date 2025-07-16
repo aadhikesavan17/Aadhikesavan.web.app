@@ -580,3 +580,21 @@
   }
 }
 
+.project1-back-des1 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 55%;
+  width: 90%;
+  padding: 10px;
+}
+
+.pbd {
+  font-weight: 550;
+  font-size: 17px;
+  font-family: 'Lato', sans-serif;
+  color: white;
+}
